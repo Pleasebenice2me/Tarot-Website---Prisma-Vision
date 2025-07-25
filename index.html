@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tarot Card</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel&family=Uncial+Antiqua&display=swap" rel="stylesheet"/>
+  <link rel="icon" type="image/x-icon" href="images/icon.ico" />
+</head>
+<body>
+    <canvas id="stars-canvas"></canvas>
+    <audio id="bg-music" src="music/background.mp3" loop autoplay></audio>
+    <audio id="card-sound" src="music/card-click.mp3"></audio>
+
+    <div id="fade-overlay"></div>
+    <div class="container">
+        <div class="content">
+            <h1>Coming to see what your future holds?</h1>
+            <p>Let the cards decide</p>
+        </div>
+        <div class="tarot-card">
+            <div id="layers">
+                <img class="inside" src="images/backoftarotcard.png" alt="Back of Tarot Card"/>
+            </div>
+        </div>
+    </div>
+    <div id="deck-container" style="display:none">
+        <h2>Choose your card</h2>
+        <div id="deck-grid"></div>
+    </div>
+    <div id="card-modal" style="display: none;">
+        <div class="modal-backdrop"></div>
+        <div class="modal-content">
+            <div class="modal-description" id="card-description"></div>
+            <div>
+                <h2 id="modal-card-name" style="color: #a5b4fc; text-align: center; margin-bottom:1rem;"></h2>
+                <div class="card-flip-wrapper">
+                    <img id="modal-card-image" src="" />
+                </div>
+            </div>
+            <div class="modal-controls">
+                <button id="btn-upright">Upright</button>
+                <button id="btn-reversed">Reversed</button>
+            </div>
+        </div>
+    </div>
+    
+
+<script src="script.js"></script>
+<script>
+  initStars();
+  animateStars();
+</script>
+
+</body>
+</html>
